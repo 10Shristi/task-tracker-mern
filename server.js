@@ -4,7 +4,7 @@ const path = require("path");
 const cors = require("cors");
 require("dotenv").config();
 
-const noteRoutes = require("./routes/noteRoutes");
+const taskRoutes = require("./routes/taskRoutes");
 
 const app = express();
 
@@ -16,7 +16,9 @@ app.use(express.json());
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB connected"))
   .catch(err => console.error("MongoDB error:", err));
-app.use("/api/notes", noteRoutes);
+
+app.use("/api/tasks", taskRoutes);
+
 // serve frontend
 app.use(express.static(path.join(__dirname, "public")));
 
