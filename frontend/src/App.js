@@ -65,7 +65,8 @@ import TaskForm from "./Components/TaskForm";
 import TaskItem from "./Components/TaskItem";
 import "./App.css";
 
-const API_URL = "http://localhost:4000/api/tasks";
+const API_URL = "/api/tasks";
+
 
 function App() {
   const [tasks, setTasks] = useState([]);
