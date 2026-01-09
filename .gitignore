@@ -1,2 +1,2 @@
 node_modules
-.envgit commit -m "Serve React frontend from Express for deployment"
+.env
